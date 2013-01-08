@@ -48,11 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IJenkinsRestApi.cs" />
+    <Compile Include="JenkinsData.cs" />
+    <Compile Include="IJenkinsJsonClient.cs" />
+    <Compile Include="JenkinsJsonClient.cs" />
     <Compile Include="Job.cs" />
-    <Compile Include="JenkinsRestApi.cs" />
-    <Compile Include="Job.cs" />
-    <Compile Include="JsonNetDeserializer.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
