@@ -30,5 +30,17 @@ namespace JenkinsRestClient
             var request = new RestRequest("/job/"+job.Name+"/build", Method.POST);
             _client.Execute(request);
         }
+
+        public IEnumerable<SlaveData> GetAllSlaves()
+        {
+            return GetComputerData().Computer;
+        }
+
+        private JenkinsComputerData GetComputerData()
+        {
+            var request = new RestRequest("computer/api/json", Method.GET);
+            var response = _client.Execute<JenkinsComputerData>(request);
+            return response.Data;
+        }
     }
 }

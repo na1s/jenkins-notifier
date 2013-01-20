@@ -6,5 +6,6 @@ namespace JenkinsRestClient
     {
         IEnumerable<Job> GetAllJobs();
         void StartJob(Job job);
+        IEnumerable<SlaveData> GetAllSlaves();
     }
 }
